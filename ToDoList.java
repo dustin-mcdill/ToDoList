@@ -1,10 +1,10 @@
-// TaskList.java
+// ToDoList
 import java.util.*;
 
 public class ToDoList {
     private List<Task> tasks = new ArrayList<>();
 
-    public void addTask(String description) {
+    public void addTask(String description) {//adds new task or lets user know error
         if (description.isEmpty()) {
             System.out.println("You cant complete an empty task! Please enter again.");
             return;
@@ -13,7 +13,7 @@ public class ToDoList {
         System.out.println("Task added, get to work!");
     }
 
-    public void taskComplete(int index) {
+    public void taskComplete(int index) {//marks index as complete or tells user number does not exist
         if (index < 0 || index >= tasks.size()) {
             System.out.println("Invalid task number.");
             return;
@@ -22,7 +22,7 @@ public class ToDoList {
         System.out.println("Task marked as complete. Excellent job!");
     }
 
-    public void showTasks() {
+    public void showTasks() {//displays tasks and their current status
         if (tasks.isEmpty()) {
             System.out.println("There are no tasks. You can now go lay on the sofa.");
             return;
